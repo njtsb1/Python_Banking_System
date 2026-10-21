@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Had Bank</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="dark-mode">
+    <header class="app-header">
+        <h1 class="brand-title">Had Bank</h1>
+        <div class="header-controls">
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle light/dark theme">
+                <span class="theme-icon sun-icon">☀️</span>
+                <span class="theme-icon moon-icon">🌙</span>
+            </button>
+            <!-- Language Selection -->
+            <nav class="lang-nav" aria-label="Language selector">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="pt">PT</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="app-container">
+        <!-- Balance Display -->
+        <section class="balance-card" aria-labelledby="balance-title">
+            <h2 id="balance-title" class="sr-only">Account Balance</h2>
+            <p class="balance-amount" id="balance-display">R$ 0.00</p>
+        </section>
+
+        <!-- Mock Dashboard Chart Graphic -->
+        <div class="chart-container" aria-hidden="true">
+            <svg viewBox="0 0 400 150" class="mock-chart">
+                <path d="M20,110 L60,80 L100,105 L140,75 L180,95 L220,60 L260,85 L300,50 L340,80 L380,40" fill="none" stroke="url(#chart-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="20" cy="110" r="5" class="dot-1"/>
+                <circle cx="60" cy="80" r="5" class="dot-2"/>
+                <circle cx="100" cy="105" r="5" class="dot-3"/>
+                <circle cx="140" cy="75" r="5" class="dot-4"/>
+                <circle cx="180" cy="95" r="5" class="dot-5"/>
+                <circle cx="220" cy="60" r="5" class="dot-6"/>
+                <circle cx="260" cy="85" r="5" class="dot-7"/>
+                <circle cx="300" cy="50" r="5" class="dot-8"/>
+                <circle cx="340" cy="80" r="5" class="dot-9"/>
+                <circle cx="380" cy="40" r="5" class="dot-10"/>
+                <defs>
+                    <linearGradient id="chart-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#8ce99a"/>
+                        <stop offset="33%" stop-color="#74c0fc"/>
+                        <stop offset="66%" stop-color="#ffd43b"/>
+                        <stop offset="100%" stop-color="#ff922b"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- Interactive Banking Operations -->
+        <section class="operations-grid" aria-label="Banking Actions">
+            <button id="btn-deposit" class="op-card deposit" data-i18n="deposit_btn">
+                <span class="op-icon">↑</span>
+                <span class="op-label">DEPOSIT</span>
+            </button>
+            <button id="btn-withdraw" class="op-card withdraw" data-i18n="withdraw_btn">
+                <span class="op-icon">↓</span>
+                <span class="op-label">WITHDRAW</span>
+            </button>
+            <button id="btn-statement" class="op-card statement" data-i18n="statement_btn">
+                <span class="op-icon">📋</span>
+                <span class="op-label">STATEMENT</span>
+            </button>
+        </section>
+
+        <!-- Dynamic Output Console / Logs -->
+        <section class="console-box" aria-live="polite">
+            <div id="console-output" class="console-text" data-i18n="welcome_msg">
+                Welcome to Had Bank! Choose an option above to begin.
+            </div>
+        </section>
+
+        <!-- Footer Notice -->
+        <footer class="coming-soon-notice">
+            <p data-i18n="footer_text_1">More features coming soon.</p>
+            <p class="highlight" data-i18n="footer_text_2">Monetize with special fees!</p>
+        </footer>
+    </main>
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
