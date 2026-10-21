@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# OS metadata architecture files
+.DS_Store
+Thumbs.db
+
+# Configuration and IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
